@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { Group, Mesh, MeshBasicMaterial } from "three";
 
 const Balloon = () => {
-  const ref = useRef<Mesh>();
+  const ref = useRef(null);
 
   const random = (min: number, max: number) => {
     return Math.random() * (max - min) + min;
@@ -14,12 +14,15 @@ const Balloon = () => {
   };
 
   useFrame(() => {
-    if (ref.current) {
-      ref.current.position.y += 0.01; // Adjust the speed of the balloons
-
-      if (ref.current.position.y > 30) {
-        ref.current.position.y = -5;
-      }
+  
+    if(!ref.current) return;
+  
+    const mesh = ref.current as Mesh<any>; // Correct type assertion
+  
+    mesh.position.y += 0.01; // Adjust the speed of the balloons
+  
+    if (mesh.position.y > 30) {
+      mesh.position.y = -5;
     }
   });
 
