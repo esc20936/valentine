@@ -16,14 +16,14 @@ export default function Experience() {
             <group ref={ref}>
                 <Float speed={0.5} >
                     <Clouds material={THREE.MeshLambertMaterial} limit={200}>
-                        <Cloud concentrate="inside" color="#fff" growth={100} opacity={1.25} seed={0.3} bounds={200} volume={150} />
+                        <Cloud concentrate="inside" color="#2E29B1" growth={100} opacity={1.25} seed={0.3} bounds={200} volume={150} />
                     </Clouds>
                 </Float>
             </group>
             <BalloonGroup />
 
             <CameraControls />
-            <ambientLight intensity={4.5} color={"#2E29B1"} />
+            <ambientLight intensity={1.5} color={"#fff"} />
             <pointLight position={[10, 10, 10]} color={"#fff"} />
         </>
     )
