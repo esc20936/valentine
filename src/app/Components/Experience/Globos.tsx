@@ -27,7 +27,7 @@ const Balloon = () => {
   });
 
   return (
-    <mesh ref={ref} position={[random(-10, 10), random(-50, 50), random(-50, 50)]} scale={0.8}>
+    <mesh ref={ref} position={[random(-50, 50), random(-50, 50), random(-50, 50)]} scale={0.8}>
       <sphereGeometry args={[1, 16, 16]} />
       <meshStandardMaterial color={randomColor()} />
     </mesh>
