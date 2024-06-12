@@ -46,14 +46,14 @@ export default function Home() {
   return (
     <main className="relative flex flex-col h-full w-full">
       <Canvas>
-        <color attach="background" args={["#FF5DCE"]} />
+        <color attach="background" args={["#060270"]} />
         <Experience />
         <Html
           fullscreen
         >
           <div className="flex flex-col items-center justify-center h-full w-full text-white">
-            <h1 className="text-2xl md:text-6xl font-bold">¿Queres ser mi valentin?</h1>
-            <p className="text-xs">porfa</p>
+            <h1 className="text-2xl md:text-6xl font-bold">Te amo a ti y a tus emociones</h1>
+            <h2 className="text-lg">Queres ver intensamente conmigo?</h2>
 
             {/* row buttons */}
             <div className="flex flex-row space-x-4">
@@ -81,12 +81,12 @@ export default function Home() {
             <div
             ref={secretMessage}
             className="hidden flex-col items-center justify-center h-auto w-full mt-4">
-              <p className="text-xs">Ya ves como si queres</p>
+              <p className="text-xs">Estas invitada este domingo a las 4:25</p>
               <Image
-                src="/bears.gif"
+                src="/confirmaciontickets.jpg"
                 alt="heart"
-                width={100}
-                height={100}
+                width={200}
+                height={200}
               />
             </div>
 
